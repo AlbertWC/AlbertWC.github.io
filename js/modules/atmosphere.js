@@ -4,7 +4,7 @@
 const STOPS = [0, 0.4, 0.75, 1];
 let SKY = [];
 const hex = h => { h = h.trim().replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)); };
-const readSky = () => { const cs = getComputedStyle(document.documentElement); SKY = STOPS.map((p, i) => [p, hex(cs.getPropertyValue(`--sky-${i}`) || '#0f1115')]); };
+const readSky = () => { const cs = getComputedStyle(document.documentElement); SKY = STOPS.map((p, i) => [p, hex(cs.getPropertyValue(`--sky-${i}`) || '#f8f8f6')]); };
 const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
 function skyAt(p) {
   for (let i = 1; i < SKY.length; i++) {
