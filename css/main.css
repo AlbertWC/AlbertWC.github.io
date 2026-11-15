@@ -229,7 +229,8 @@ html.fx .seq.is-stacked .seq__item { opacity: var(--r, 0); transform: translateY
   .nav__links { display: none; }
   .nav .btn { margin-left: auto; }
   .seq__visual { display: none; }
-  .hero { padding-bottom: 88px; }
+  .hero { padding-bottom: 48px; }
+  .hero__cue { display: none; }
   .seq__visual { height: 260px; grid-template-columns: 64px 1fr; }
   .seq__item { grid-template-columns: 1fr; }
   .seq__num { grid-row: auto; font-size: 22px; }
