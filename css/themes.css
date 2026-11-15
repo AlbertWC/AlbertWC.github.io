@@ -19,6 +19,7 @@ html[data-theme="emerald"] {
   --sky-0: #0c1311; --sky-1: #10201a; --sky-2: #0e1915; --sky-3: #0a100e;
 }
 html[data-theme="ivory"] {
+  --subhead: #14181f;
   --navy: #f6f4ef; --navy-2: #ffffff; --lav: #e7edf6; --pink: #efe7da; --purple: #9a6a32; --yellow: #1d3557;
   --ink: #14181f; --ink-soft: rgb(20 24 31 / .7); --line: rgb(20 24 31 / .13);
   --on-accent: #ffffff; --on-card: #14181f; --chip: rgb(20 24 31 / .04); --side-bg: #eef1f6; --hover: #eef2f8;
@@ -31,3 +32,15 @@ html[data-theme="ivory"] {
 .palette button { width: 28px; height: 28px; border-radius: 50%; border: 2px solid rgb(255 255 255 / .35); cursor: pointer; padding: 0; }
 .palette button[aria-pressed="true"] { border-color: #fff; outline: 2px solid #fff; outline-offset: 2px; }
 .palette span { padding: 0 6px; min-width: 96px; }
+/* Graphite Pearl: Graphite Blue on a white-pearl page. Blue is darkened to #2563eb so white button text passes contrast (4.6:1). */
+html[data-theme="pearl"] {
+  --navy: #f8f8f6; --navy-2: #ffffff; --lav: #e8eefb; --pink: #dfe8fb; --purple: #2563eb; --yellow: #2563eb;
+  --ink: #0f1115; --ink-soft: rgb(15 17 21 / .66); --line: rgb(15 17 21 / .1);
+  --on-accent: #ffffff; --on-card: #0f1115; --chip: rgb(15 17 21 / .04); --side-bg: #eef3fd; --hover: #f1f5fd;
+  --sky-0: #f8f8f6; --sky-1: #f3f4f6; --sky-2: #f6f7f8; --sky-3: #f8f8f6;
+  --subhead: #0f1115;
+}
+html[data-theme="pearl"] :is(.job, .stat, .seq__item.is-current, .dl__card, .skill) {
+  box-shadow: 0 0 0 1px rgb(15 17 21 / .06), 0 10px 28px -16px rgb(15 17 21 / .18);
+}
+html[data-theme="pearl"] .award.a0 { color: #ffffff; }
