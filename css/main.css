@@ -62,6 +62,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .hero__copy { display: grid; gap: 22px; justify-items: start; }
 .hero__name { font-size: clamp(54px, 10vw, 132px); font-weight: 700; line-height: 1.04; }
+.hero__alias { display: block; margin-top: .18em; font-size: .3em; font-weight: 600; line-height: 1; letter-spacing: 0; color: var(--purple); }
 .hero__tag { font-size: clamp(19px, 2.1vw, 26px); color: var(--ink-soft); line-height: 1.35; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero__art { position: relative; justify-self: center; width: min(78vw, 420px); aspect-ratio: 1; }
