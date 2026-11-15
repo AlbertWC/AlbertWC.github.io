@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Ang Wei Chern – Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --navy:#12304a; --lav:#e7dcf0; --purple:#7e4fa0; --yellow:#f6e21c; --pink:#f5c2d5; --ink:#1d2433; --soft:#4b5468; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 210mm; }
+  body { font: 9.4pt/1.4 Inter, Arial, sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .side-bg { position: fixed; left: 0; top: 0; bottom: 0; width: 68mm; background: var(--navy); }
+  .page { position: relative; display: grid; grid-template-columns: 68mm 1fr; min-height: 297mm; }
+  aside { position: relative; color: #eef1f6; padding: 0 8mm 4mm; overflow: hidden; }
+  .top { position: relative; height: 68mm; margin: 0 -8mm 4mm; }
+  .top svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .photo { position: absolute; left: 50%; top: 14mm; width: 46mm; height: 46mm; translate: -50% 0; border-radius: 50%; overflow: hidden; border: 1.2mm solid #fff; box-shadow: 0 2mm 5mm rgb(0 0 0 / .25); }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  aside h2 { font: 600 8pt/1 'Space Grotesk', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--yellow); margin: 5mm 0 2.2mm; }
+  aside p, aside li { font-size: 8.6pt; }
+  aside a { color: #eef1f6; text-decoration: none; }
+  aside ul { list-style: none; display: grid; gap: 1.4mm; }
+  .grp { margin-bottom: 2.6mm; }
+  .grp b { display: block; font-weight: 600; font-size: 8pt; color: var(--lav); margin-bottom: 1mm; }
+  .tags { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+  .tags span { font-size: 7.8pt; padding: .5mm 2mm; border-radius: 3mm; background: rgb(255 255 255 / .1); }
+  .blobs { position: absolute; left: 0; right: 0; bottom: 0; height: 14mm; }
+  main { padding: 12mm 13mm 4mm 11mm; }
+  h1 { font: 700 27pt/1 'Space Grotesk', sans-serif; letter-spacing: -.01em; color: var(--navy); }
+  .role { font: 500 11pt/1.2 'Space Grotesk', sans-serif; color: var(--purple); margin-top: 2mm; }
+  main h2 { font: 700 10.5pt/1 'Space Grotesk', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--purple); margin: 5.5mm 0 2.6mm; display: flex; align-items: center; gap: 3mm; }
+  main h2::after { content: ''; flex: 1; height: .35mm; background: var(--lav); }
+  .summary { color: var(--soft); margin-top: 4.5mm; }
+  .job { margin-bottom: 4.5mm; break-inside: avoid; }
+  .job__head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .job__head b { font: 600 11pt/1.2 'Space Grotesk', sans-serif; color: var(--navy); }
+  .job__head span { font-size: 8.4pt; font-weight: 600; color: var(--purple); white-space: nowrap; }
+  .job i { display: block; font-style: normal; color: var(--soft); font-weight: 500; margin: .6mm 0 1.6mm; }
+  .job ul { padding-left: 4mm; display: grid; gap: 1.1mm; }
+  .job li::marker { color: var(--purple); }
+  .proj { font-weight: 600; color: var(--navy); margin: 1.6mm 0 1mm; }
+  .side__stack { font-size: 8.2pt; color: var(--purple); font-weight: 500; margin-top: .6mm; }
+  .job:has(.side__blurb) { margin-bottom: 3mm; }
+  .job:has(.side__blurb) i { margin-bottom: .6mm; }
+  .proj span { font-weight: 400; color: var(--soft); }
+  .job__url { font-size: 8.4pt; color: var(--purple); text-decoration: none; font-weight: 600; }
+  aside .edu b { color: #fff; font-size: 8.6pt; }
+  aside .edu span { display: block; color: #c9d1de; font-size: 8.2pt; }
+  aside .ach { gap: 2mm; }
+  aside .ach b { display: block; color: #fff; font-size: 8.4pt; font-weight: 600; line-height: 1.3; }
+  aside .ach span, aside .ach a { display: block; color: #c9d1de; font-size: 8pt; }
+</style></head>
+<body>
+<div class="side-bg"></div>
+<div class="page">
+  <aside>
+    <div class="top">
+      <svg viewBox="0 0 680 720" preserveAspectRatio="none" aria-hidden="true"><path fill="#e7dcf0" d="M0 0H680V60C620 160 600 300 520 420C430 560 300 520 180 600C110 650 50 690 0 700Z"/></svg>
+      <div class="photo"><img src="../images/photo.jpg" alt=""></div>
+    </div>
+    <h2>Contact</h2>
+    <ul>
+      
+      <li><a href="mailto:angweichern@gmail.com">angweichern@gmail.com</a></li>
+      <li><a href="https://linkedin.com/in/angweichern">linkedin.com/in/angweichern</a></li>
+      
+    </ul>
+    <h2>Skills</h2>
+    <div class="grp"><b>Frontend</b><div class="tags"><span>React</span><span>Angular</span><span>TypeScript</span><span>JavaScript</span></div></div><div class="grp"><b>Backend</b><div class="tags"><span>Node.js</span><span>Express</span><span>GraphQL</span><span>REST APIs</span><span>ASP.NET</span></div></div><div class="grp"><b>Data</b><div class="tags"><span>MongoDB</span><span>Redis</span><span>SQL Server</span></div></div><div class="grp"><b>Cloud &amp; DevOps</b><div class="tags"><span>AWS</span><span>Google Cloud</span><span>CI/CD</span><span>Git</span></div></div>
+    <h2>Languages</h2>
+    <p>English · Mandarin · Malay</p>
+    <h2>Education</h2>
+    <div class="edu"><b>Universiti Kebangsaan Malaysia (UKM)</b><span>Bachelor of Software Engineering (Information System Development)</span><span>First Class Honours</span></div>
+    <h2>Awards &amp; Certs</h2>
+    <ul class="ach"><li><b>CPRE-FL Certification</b><span>MY-CPRE-FL-2019-00012</span></li><li><b>MonsoonSIM Business Simulation</b><span>Top 10 Finalist, Regional Malaysia</span></li><li><b>ABCDE Kuala Lumpur Hackathon @ ADAX</b><span>Top 10 Finalist</span></li><li><b>Google Cloud Skills Boost</b><span><a href="https://www.cloudskillsboost.google/public_profiles/74339e1d-37d0-4f92-8976-491b317ae7fb">Public profile ↗</a></span></li></ul>
+    <svg class="blobs" viewBox="0 0 680 400" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#f6e21c" d="M0 120C80 60 180 70 260 130C330 180 360 260 300 400H0Z"/>
+      <path fill="#e7dcf0" d="M140 400C200 300 300 250 420 260C520 270 600 230 680 180V400Z"/>
+      <path fill="#f5c2d5" d="M0 280C90 240 170 280 210 340C230 370 240 390 250 400H0Z"/>
+    </svg>
+  </aside>
+  <main>
+    <h1>ANG WEI CHERN</h1>
+    <p class="role">Full Stack Developer</p>
+    <p class="summary">Full Stack Developer with 6+ years of experience delivering scalable web platforms in automotive retail, enterprise events and e-commerce, now extending into AI voice agents. Strong in the MERN stack, TypeScript and GraphQL, with a solid base in system architecture, product lifecycle ownership and cross-functional collaboration. Committed to clean code, performance and using modern tools to drive business impact.</p>
+    <h2>Experience</h2>
+    <div class="job"><div class="job__head"><b>Appvantage</b><span>Jul 2022 – Present</span></div><i>Full Stack Developer</i><p class="proj">Retail Centre <span>· Enterprise automotive retail platform</span></p><ul><li>Lead development of Retail Centre, an enterprise automotive retail platform that brings vehicle sales, banking and leasing into one workflow, with onshore and offshore bank integrations.</li><li>Architected its modular finance and leasing products: multiple banks, date-based campaign timelines and product mapping at vehicle-variant level.</li><li>Designed its vehicle rental module with real-time inventory and availability tracking.</li></ul><p class="proj">AI Voice Agent <span>· Leads, CRM and inventory</span></p><ul><li>Build an AI voice agent solution that handles lead management, CRM and inventory management in one platform.</li></ul><p class="proj">Across the role</p><ul><li>Delivered full-cycle features on the MERN stack with TypeScript, GraphQL and RESTful APIs, and built reusable frontend components.</li><li>Mentored junior developers and introduced engineering practices including CI/CD pipelines and Git workflows.</li></ul></div><div class="job"><div class="job__head"><b>Fusionex</b><span>Aug 2020 – Jun 2022</span></div><i>Consultant, Solution Development</i><ul><li>Developed and maintained B2B platforms for virtual exhibitions, livestreamed events and real-time business matching.</li><li>Integrated a secure payment gateway for seamless in-platform transactions.</li><li>Built event registration and livestream management for advertisers and event hosts.</li><li>Worked closely with stakeholders to refine product requirements, improving UX and system performance.</li></ul></div>
+    <h2>Side Projects</h2>
+    <div class="job"><div class="job__head"><b>12 O'KLOCK</b><a class="job__url" href="https://12oklock.com/">12oklock.com</a></div><i>E-commerce setup (side project)</i><p class="side__blurb">Online store for a Malaysian bento box and lunch-gear brand.</p><p class="side__stack">WordPress · WooCommerce</p></div><div class="job"><div class="job__head"><b>GBA Admin</b><span>Aug 2026 – Present</span></div><i>Full-stack build (side project)</i><p class="side__blurb">Admin platform for a Buddhist association, built module by module: receipts, inventory and floor plans, teaching and events.</p><p class="side__stack">React · MUI · Node.js · Express · TypeScript · MySQL · Puppeteer</p></div>
+  </main>
+</div>
+</body></html>
