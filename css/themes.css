@@ -1,0 +1,33 @@
+/* Palette trials (local build only). Default (main.css :root) is Graphite Blue; each theme here overrides it.
+   Pick one with the swatch panel; to make it permanent, copy its values into :root. */
+html[data-theme="navy"] {
+  --navy: #10263c; --navy-2: #183652; --lav: #e7dcf0; --pink: #f5c2d5; --purple: #b48ad6; --yellow: #f6e21c;
+  --ink: #f3f1f7; --ink-soft: rgb(243 241 247 / .72); --line: rgb(243 241 247 / .14);
+  --on-accent: #10263c; --on-card: #10263c; --side-bg: #2a2350; --hover: #20456a;
+  --sky-0: #10263c; --sky-1: #221e42; --sky-2: #16223e; --sky-3: #0e1e32;
+}
+html[data-theme="teal"] {
+  --navy: #0b1320; --navy-2: #12203a; --lav: #ccfbf1; --pink: #e0f2fe; --purple: #5eead4; --yellow: #2dd4bf;
+  --ink: #ecfeff; --ink-soft: rgb(236 254 255 / .7); --line: rgb(236 254 255 / .13);
+  --on-accent: #042f2e; --on-card: #0b1320; --side-bg: #0f2a3a; --hover: #183055;
+  --sky-0: #0b1320; --sky-1: #0e1d33; --sky-2: #0c1829; --sky-3: #09111c;
+}
+html[data-theme="emerald"] {
+  --navy: #0c1311; --navy-2: #15211c; --lav: #d1fae5; --pink: #ecfdf5; --purple: #6ee7b7; --yellow: #34d399;
+  --ink: #f0fdf4; --ink-soft: rgb(240 253 244 / .7); --line: rgb(240 253 244 / .12);
+  --on-accent: #052e1f; --on-card: #0c1311; --side-bg: #12291f; --hover: #1d3128;
+  --sky-0: #0c1311; --sky-1: #10201a; --sky-2: #0e1915; --sky-3: #0a100e;
+}
+html[data-theme="ivory"] {
+  --navy: #f6f4ef; --navy-2: #ffffff; --lav: #e7edf6; --pink: #efe7da; --purple: #9a6a32; --yellow: #1d3557;
+  --ink: #14181f; --ink-soft: rgb(20 24 31 / .7); --line: rgb(20 24 31 / .13);
+  --on-accent: #ffffff; --on-card: #14181f; --chip: rgb(20 24 31 / .04); --side-bg: #eef1f6; --hover: #eef2f8;
+  --sky-0: #f6f4ef; --sky-1: #f1ede4; --sky-2: #f4f1ea; --sky-3: #f6f4ef;
+}
+.palette {
+  position: fixed; left: 16px; bottom: 16px; z-index: 40; display: flex; gap: 6px; align-items: center; padding: 8px 10px;
+  border-radius: 999px; background: rgb(0 0 0 / .55); backdrop-filter: blur(8px); font: 600 12px/1 Inter, sans-serif; color: #fff;
+}
+.palette button { width: 28px; height: 28px; border-radius: 50%; border: 2px solid rgb(255 255 255 / .35); cursor: pointer; padding: 0; }
+.palette button[aria-pressed="true"] { border-color: #fff; outline: 2px solid #fff; outline-offset: 2px; }
+.palette span { padding: 0 6px; min-width: 96px; }
