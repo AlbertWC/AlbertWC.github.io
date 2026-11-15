@@ -28,6 +28,9 @@ export function initScrollFx(hooks = []) {
   // with the momentum. Desktop already has Lenis, so no easing there.
   const RUN = finePointer ? 1 : 1.6;
   const EASE = finePointer ? 0 : 16;
+  // Fade-ins: on touch they start as soon as an element enters and finish within ~18% of the screen,
+  // so text is fully sharp while it is still in the lower part of the screen (was ~mid-screen).
+  const IN = finePointer ? 0.96 : 1.0, FADE = finePointer ? 0.32 : 0.18;
 
   document.querySelectorAll('[data-lines]').forEach(el => {
     el.innerHTML = el.innerHTML.split(/<br\s*\/?>/i).map(t => `<span class="line">${t}</span>`).join('');
@@ -154,7 +157,7 @@ export function initScrollFx(hooks = []) {
     for (const s of seqs) {
       if (timed(s)) {
         // Stacked on touch: each step rises in over half a screen of scroll (reversible); the phone runs on its timer.
-        s.tops.forEach((top, i) => set(s.items[i], '--r', scrub(y, top - vh * (0.96 - (i % 4) * 0.045), vh * 0.32 * RUN).toFixed(3)));
+        s.tops.forEach((top, i) => set(s.items[i], '--r', scrub(y, top - vh * (IN - (i % 4) * 0.03), vh * FADE).toFixed(3)));
         continue;
       }
       // Stacked (narrow or short screens), the phone follows its own position through the viewport instead.
@@ -170,15 +173,15 @@ export function initScrollFx(hooks = []) {
       set(b.el, '--k', k.toFixed(3));
       toggle(b.el, 'is-live', k > 0 && k < 1);
     }
-    for (const b of heads) set(b.el, '--k', scrub(y, b.top - vh * 0.82, vh * 0.3 * RUN).toFixed(3));
-    for (const b of lines) set(b.el, '--k', scrub(y, b.top - vh * 0.9, vh * 0.28 * RUN).toFixed(3));
+    for (const b of heads) set(b.el, '--k', scrub(y, b.top - vh * (finePointer ? 0.82 : 0.95), vh * (finePointer ? 0.3 : 0.2)).toFixed(3));
+    for (const b of lines) set(b.el, '--k', scrub(y, b.top - vh * IN, vh * FADE).toFixed(3));
     for (const b of [...drifts, ...paras]) {
       if (!near(b.top, b.h, 200, 200)) continue;
       set(b.el, '--dy', `${((b.top - y + b.h / 2 - vh / 2) * -b.speed).toFixed(1)}px`);
     }
-    for (const b of reveals) set(b.el, '--r', scrub(y, b.top - vh * (0.96 - b.off), vh * 0.32 * RUN).toFixed(3));
+    for (const b of reveals) set(b.el, '--r', scrub(y, b.top - vh * (IN - (finePointer ? b.off : b.off * 0.5)), vh * FADE).toFixed(3));
     for (const c of counters) {
-      const k = 1 - Math.pow(1 - scrub(y, c.top - vh * 0.92, vh * 0.35 * RUN), 3);
+      const k = 1 - Math.pow(1 - scrub(y, c.top - vh * IN, vh * (finePointer ? 0.35 : 0.25)), 3);
       const txt = (c.to * k).toFixed(c.dec);
       if (c.el.textContent !== txt) c.el.textContent = txt;
     }
