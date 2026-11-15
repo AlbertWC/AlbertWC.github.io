@@ -2,7 +2,6 @@
 import { initAtmosphere } from './modules/atmosphere.js';
 import { initScrollFx } from './modules/scroll.js';
 import { initContact } from './modules/contact.js';
-import { initNav } from './modules/nav.js';
 
 const safe = (name, fn) => { try { return fn(); } catch (err) { console.error(`[${name}]`, err); } };
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -16,7 +15,6 @@ async function initSmoothScroll() {
 }
 
 safe('contact', initContact);
-safe('nav', initNav);
 const atmo = safe('atmosphere', initAtmosphere);
 const fx = safe('scrollfx', () => initScrollFx(atmo ? [atmo.update] : []));
 if (atmo && !fx) atmo.listen();
