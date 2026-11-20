@@ -23,10 +23,10 @@
   .tags { display: flex; flex-wrap: wrap; gap: 1.2mm; }
   .tags span { font-size: 7.8pt; padding: .5mm 2mm; border-radius: 3mm; background: rgb(255 255 255 / .1); }
   .blobs { position: absolute; left: 0; right: 0; bottom: 0; height: 14mm; }
-  main { padding: 8mm 13mm 2mm 11mm; }
+  main { padding: 6.5mm 13mm 1mm 11mm; }
   h1 { font: 700 27pt/1 'Space Grotesk', sans-serif; letter-spacing: -.01em; color: var(--navy); }
   .role { font: 500 11pt/1.2 'Space Grotesk', sans-serif; color: var(--purple); margin-top: 2mm; }
-  main h2 { font: 700 10.5pt/1 'Space Grotesk', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--purple); margin: 4.4mm 0 2.2mm; display: flex; align-items: center; gap: 3mm; }
+  main h2 { font: 700 10.5pt/1 'Space Grotesk', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--purple); margin: 4.2mm 0 2.2mm; display: flex; align-items: center; gap: 3mm; }
   main h2::after { content: ''; flex: 1; height: .35mm; background: var(--lav); }
   .summary { color: var(--soft); margin-top: 3.5mm; }
   .job { margin-bottom: 3.4mm; break-inside: avoid; }
@@ -37,8 +37,9 @@
   .job ul { padding-left: 4mm; display: grid; gap: .7mm; }
   .job li::marker { color: var(--purple); }
   .proj { font-weight: 600; color: var(--navy); margin: 1.2mm 0 .7mm; }
+  .side__role { font-style: normal; font-weight: 500; font-size: 8.6pt; color: #5b6475; }
   .side__stack { font-size: 8.2pt; color: var(--purple); font-weight: 500; margin-top: .6mm; }
-  .job:has(.side__blurb) { margin-bottom: 3mm; }
+  .job:has(.side__blurb) { margin-bottom: 2.4mm; }
   .job:has(.side__blurb) i { margin-bottom: .6mm; }
   .proj span { font-weight: 400; color: var(--soft); }
   .job__url { font-size: 8.4pt; color: var(--purple); text-decoration: none; font-weight: 600; }
@@ -83,7 +84,7 @@
     <h2>Experience</h2>
     <div class="job"><div class="job__head"><b>Appvantage</b><span>Jul 2022 – Present</span></div><i>Full Stack Developer</i><p class="proj">Retail Centre <span>· Enterprise automotive retail platform</span></p><ul><li>Developed core features of a platform that unifies vehicle sales, financing and leasing in one workflow, integrated with onshore and offshore banks.</li><li>Built its modular finance and leasing products: multiple banks, date-based campaign timelines and product mapping at vehicle-variant level.</li><li>Built its vehicle rental module with real-time inventory and availability tracking.</li></ul><p class="proj">Trade-in &amp; Auction Platform <span>· Used-car valuation and dealer auctions, web + iOS/Android</span></p><ul><li>Maintained the Flutter iOS and Android apps for an AI-driven trade-in and auction platform that lets dealers value, buy and bid on used vehicles.</li><li>Delivered fixes and enhancements across live dealer bidding, push notifications and vehicle handover with condition marking and photo uploads.</li></ul><p class="proj">AI Voice Agent <span>· Leads, CRM and inventory</span></p><ul><li>Built an AI voice agent that handles lead capture, CRM updates and inventory checks.</li></ul><p class="proj">Across the role</p><ul><li>Shipped features end to end on the MERN stack with TypeScript, GraphQL and RESTful APIs, and built reusable frontend components.</li><li>Mentored junior developers and helped set up CI/CD pipelines and Git workflows.</li></ul></div><div class="job"><div class="job__head"><b>Fusionex</b><span>Aug 2020 – Jun 2022</span></div><i>Consultant, Solution Development</i><ul><li>Developed and maintained B2B platforms for virtual exhibitions, livestreamed events and real-time business matching.</li><li>Built event registration, livestream management and secure payment gateway integration for advertisers and event hosts.</li></ul></div>
     <h2>Side Projects</h2>
-    <div class="job"><div class="job__head"><b>12 O'KLOCK</b><a class="job__url" href="https://12oklock.com/">12oklock.com</a></div><i>E-commerce setup (side project)</i><p class="side__blurb">Online store for a Malaysian bento box and lunch-gear brand.</p><p class="side__stack">WordPress · WooCommerce</p></div><div class="job"><div class="job__head"><b>GBA Admin</b><span>Aug 2026 – Present</span></div><i>Full-stack build (side project)</i><p class="side__blurb">Admin platform for a Buddhist association, built module by module: receipts, inventory and floor plans, teaching and events.</p><p class="side__stack">React · MUI · Node.js · Express · TypeScript · MySQL · Puppeteer</p></div>
+    <div class="job"><div class="job__head"><b>Mamak Rush <em class="side__role">· Game design and build</em></b><a class="job__url" href="https://mamakrush.vercel.app/">mamakrush.vercel.app</a></div><p class="side__blurb">Browser cooking game: run a mamak stall solo, on phone or desktop.</p><p class="side__stack">React · TypeScript · Vite · SVG · Web Audio · Vercel</p></div><div class="job"><div class="job__head"><b>12 O'KLOCK <em class="side__role">· E-commerce setup</em></b><a class="job__url" href="https://12oklock.com/">12oklock.com</a></div><p class="side__blurb">Online store for a Malaysian bento box and lunch-gear brand.</p><p class="side__stack">WordPress · WooCommerce</p></div><div class="job"><div class="job__head"><b>GBA Admin <em class="side__role">· Full-stack build</em></b><span>Aug 2026 – Present</span></div><p class="side__blurb">Admin platform for a Buddhist association, built module by module: receipts, inventory and floor plans, teaching and events.</p><p class="side__stack">React · MUI · Node.js · Express · TypeScript · MySQL · Puppeteer</p></div>
     <h2>Awards &amp; Certificates</h2>
     <div class="ach"><div><b>CPRE-FL Certification</b><span>MY-CPRE-FL-2019-00012</span></div><div><b>MonsoonSIM Business Simulation</b><span>Top 10 Finalist, Regional Malaysia</span></div><div><b>ABCDE Kuala Lumpur Hackathon @ ADAX</b><span>Top 10 Finalist</span></div><div><b>Google Cloud Skills Boost</b><span><a href="https://www.cloudskillsboost.google/public_profiles/74339e1d-37d0-4f92-8976-491b317ae7fb">Public profile ↗</a></span></div></div>
   </main>
